@@ -12,7 +12,7 @@ const ShowBook = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`http://localhost:5555/books/${id}`)
+      .get(`http://localhost:4050/books/${id}`)
       .then((response) => {
         setBook(response.data);
         setLoading(false);
@@ -44,8 +44,8 @@ const ShowBook = () => {
             <span>{book.author}</span>
           </div>
           <div className='my-4'>
-            <span className='text-xl mr-4 text-gray-500'>Publish Year</span>
-            <span>{book.publishYear}</span>
+            <span className='text-xl mr-4 text-gray-500'>Year</span>
+            <span>{book.year}</span>
           </div>
           <div className='my-4'>
             <span className='text-xl mr-4 text-gray-500'>Create Time</span>
